@@ -35,6 +35,7 @@ statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
 
 %build
 %configure \
+	--enable-cxx \
 	--enable-threads \
 	--enable-shlib
 	
@@ -45,10 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_infodir}
 
 %{makeinstall} \
+	installsl installcxx installth installinfo \
 	shlibdir=$RPM_BUILD_ROOT%{_libdir} \
 	incdir=$RPM_BUILD_ROOT%{_includedir}
-
-install %{name}.info*	$RPM_BUILD_ROOT%{_infodir}
 
 gzip -9nf README NEWS ChangeLog
 
