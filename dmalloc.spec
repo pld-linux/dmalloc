@@ -36,7 +36,7 @@ statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
 	--enable-cxx \
 	--enable-threads \
 	--enable-shlib
-	
+
 %{__make} dmalloc_t all light dmalloc.info
 
 %install
