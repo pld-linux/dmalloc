@@ -6,7 +6,11 @@ Release:	1
 License:	LGPL
 Group:		Development/Debuggers
 Source0:	http://download.sourceforge.net/dmalloc/%{name}-%{version}.tgz
+Patch0:		%{name}-info.patch
+PAtch1:		%{name}-pic.patch
 URL:		http://dmalloc.com/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	texinfo
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,12 +31,27 @@ wykrywanie zapisów poza zaalokowanym obszarem, informowanie o
 pliku/numerze linii, w której wystêpuje problem oraz generalne
 statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
 
+%package static
+Summary:	Static dmalloc libraries
+Summary(pl):	Biblioteki statyczne dmalloc
+Group:		Development/Debuggers
+Requires:	%{name} = %{version}
+
+%description static
+Static dmalloc libraries.
+
+%description static -l pl
+Biblioteki statyczne dmalloc.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
-%configure2_13 \
+aclocal
+autoconf
+%configure \
 	--enable-cxx \
 	--enable-threads \
 	--enable-shlib
@@ -66,5 +85,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/*
-%{_libdir}/*
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_infodir}/*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
