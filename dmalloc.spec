@@ -2,12 +2,14 @@ Summary:	A library for controlling and tracing dynamic memory allocations
 Summary(pl):	Biblioteka do kontroli i ¶ledzenia dynamicznej alokacji pamiêcie
 Name:		dmalloc
 Version:	4.8.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Debuggers
 Source0:	http://download.sourceforge.net/dmalloc/%{name}-%{version}.tgz
+Source1:	%{name}.1
 Patch0:		%{name}-info.patch
-PAtch1:		%{name}-pic.patch
+Patch1:		%{name}-pic.patch
+Patch2:		%{name}-4.8.2-pld_man.patch
 URL:		http://dmalloc.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -45,8 +47,10 @@ Biblioteki statyczne dmalloc.
 
 %prep
 %setup -q
+install %{SOURCE1} .
 %patch0 -p1
 %patch1 -p1
+%patch2 -p0
 
 %build
 aclocal
@@ -60,12 +64,14 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_infodir}
+install -d $RPM_BUILD_ROOT{%{_infodir},%{_mandir}/man1}
 
 %{makeinstall} \
 	installsl installcxx installth installinfo \
 	shlibdir=$RPM_BUILD_ROOT%{_libdir} \
 	incdir=$RPM_BUILD_ROOT%{_includedir}
+
+install dmalloc.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf README NEWS ChangeLog
 
@@ -86,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_mandir}/man1/*
 %{_infodir}/*
 
 %files static
