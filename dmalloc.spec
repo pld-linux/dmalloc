@@ -53,7 +53,7 @@ install %{SOURCE1} .
 %patch2 -p0
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure \
 	--enable-cxx \
@@ -73,8 +73,6 @@ install -d $RPM_BUILD_ROOT{%{_infodir},%{_mandir}/man1}
 
 install dmalloc.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf README NEWS ChangeLog
-
 %post
 /sbin/ldconfig
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
@@ -88,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README NEWS ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
