@@ -1,0 +1,24 @@
+--- dmalloc.1.orig	Sat Apr 20 21:40:18 2002
++++ dmalloc.1	Sat Apr 20 21:41:13 2002
+@@ -211,12 +211,12 @@
+ .SH "SEE ALSO"
+ The documetation for the library is in GNU Info format. Please check the
+ file
+-.IR /usr/info/dmalloc.info.gz
++.IR /usr/share/info/dmalloc.info.gz
+ for more details.
+ 
+ .SH FILES
+ .TP
+-.I /usr/info/dmalloc.info.gz
++.I /usr/share/info/dmalloc.info.gz
+ The real documentation for the dmalloc library.
+ .TP
+ .I ~/.dmallocrc
+@@ -228,5 +228,5 @@
+ .B Gray Watson.
+ Please see the copyright
+ file in 
+-.I /usr/doc/dmalloc
++.I /usr/share/doc/dmalloc-4.8.2/
+ for details.
