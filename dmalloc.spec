@@ -1,5 +1,5 @@
 Summary:	A library for controlling and tracing dynamic memory allocations
-Summary(pl):	Biblioteka do kontroli i ¶ledzenia dynamicznej alokacji pamiêcie
+Summary(pl):	Biblioteka do kontroli i ¶ledzenia dynamicznej alokacji pamiêci
 Name:		dmalloc
 Version:	5.3.0
 Release:	1
