@@ -5,9 +5,8 @@ Version:	5.4.2
 Release:	1
 License:	LGPL
 Group:		Development/Debuggers
-Source0:	http://heanet.dl.sourceforge.net/sourceforge/dmalloc/%{name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/dmalloc/%{name}-%{version}.tgz
 # Source0-md5:	ca8d9d72351679e20b8eff96a7a16bf3
-# Source0-size:	371228
 Source1:	%{name}.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pic.patch
@@ -93,10 +92,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README NEWS ChangeLog*
 %attr(755,root,root) %{_bindir}/*
-%{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_includedir}/*
 %{_mandir}/man1/*
-%{_infodir}/*
+%{_infodir}/*.info*
 
 %files static
 %defattr(644,root,root,755)
