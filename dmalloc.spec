@@ -5,7 +5,7 @@ Version:	4.8.2
 Release:	2
 License:	LGPL
 Group:		Development/Debuggers
-Source0:	http://download.sourceforge.net/dmalloc/%{name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	e9e961b844cc0179b7899eb7a6cd3e6a
 Source1:	%{name}.1
 Patch0:		%{name}-info.patch
