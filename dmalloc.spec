@@ -34,7 +34,7 @@ statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
 %setup -q
 
 %build
-%configure \
+%configure2_13 \
 	--enable-cxx \
 	--enable-threads \
 	--enable-shlib
