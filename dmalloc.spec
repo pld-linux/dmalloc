@@ -2,7 +2,7 @@ Summary:	A library for controlling and tracing dynamic memory allocations
 Summary(pl):	Biblioteka do kontroli i ¶ledzenia dynamicznej alokacji pamiêcie
 Name:		dmalloc
 Version:	4.8.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Debuggers
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tgz
