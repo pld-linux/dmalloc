@@ -1,0 +1,14 @@
+--- dmalloc-4.8.2/dmalloc.texi~	Wed Apr 10 21:28:35 2002
++++ dmalloc-4.8.2/dmalloc.texi	Wed Apr 10 21:28:35 2002
+@@ -6,9 +6,9 @@
+ @headings double
+ @c %**end of header
+   
+-@dircategory Libraries
++@dircategory Programming tools:
+ @direntry
+-* Dmalloc: (dmalloc).			Malloc debug library.
++* Dmalloc: (dmalloc).			Malloc debug library
+ @end direntry
+ 
+ @c ================================================================
