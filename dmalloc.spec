@@ -54,7 +54,7 @@ install %{SOURCE1} .
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure \
 	--enable-cxx \
 	--enable-threads \
