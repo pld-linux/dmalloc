@@ -5,8 +5,6 @@ Version:	4.8.2
 Release:	1
 License:	LGPL
 Group:		Development/Debuggers
-Group(de):	Entwicklung/Debugger
-Group(pl):	Programowanie/Odpluskwiacze
 Source0:	http://download.sourceforge.net/dmalloc/%{name}-%{version}.tgz
 URL:		http://dmalloc.com/
 BuildRequires:	texinfo
