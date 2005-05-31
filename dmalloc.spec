@@ -14,6 +14,7 @@ Patch2:		%{name}-4.8.2-pld_man.patch
 URL:		http://dmalloc.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gcc-c++
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
