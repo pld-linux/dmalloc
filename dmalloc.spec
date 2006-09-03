@@ -39,7 +39,7 @@ statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
 Summary:	Static dmalloc libraries
 Summary(pl):	Biblioteki statyczne dmalloc
 Group:		Development/Debuggers
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static dmalloc libraries.
