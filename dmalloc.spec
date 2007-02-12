@@ -1,5 +1,5 @@
 Summary:	A library for controlling and tracing dynamic memory allocations
-Summary(pl.UTF-8):   Biblioteka do kontroli i śledzenia dynamicznej alokacji pamięci
+Summary(pl.UTF-8):	Biblioteka do kontroli i śledzenia dynamicznej alokacji pamięci
 Name:		dmalloc
 Version:	5.4.2
 Release:	1
@@ -37,7 +37,7 @@ statystyki. Biblioteka umożliwia odpluskwianie programów wątkowych.
 
 %package static
 Summary:	Static dmalloc libraries
-Summary(pl.UTF-8):   Biblioteki statyczne dmalloc
+Summary(pl.UTF-8):	Biblioteki statyczne dmalloc
 Group:		Development/Debuggers
 Requires:	%{name} = %{version}-%{release}
 
