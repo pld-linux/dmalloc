@@ -1,5 +1,5 @@
 Summary:	A library for controlling and tracing dynamic memory allocations
-Summary(pl):	Biblioteka do kontroli i ¶ledzenia dynamicznej alokacji pamiêci
+Summary(pl.UTF-8):   Biblioteka do kontroli i Å›ledzenia dynamicznej alokacji pamiÄ™ci
 Name:		dmalloc
 Version:	5.4.2
 Release:	1
@@ -27,24 +27,24 @@ such things as memory-leak tracking, fence-post write detection,
 file/line number reporting, and general logging of statistics. It also
 provides support for the debugging of threaded programs.
 
-%description -l pl
-Biblioteka do odpluskwiania programów zastêpuje systemowe funkcje
+%description -l pl.UTF-8
+Biblioteka do odpluskwiania programÃ³w zastÄ™puje systemowe funkcje
 takie jak `malloc', `realloc', `calloc', `free' i inne funkcje do
-zarz±dzania pamiêci±. Mo¿liwo¶ci to wykrywanie wycieków pamiêci,
-wykrywanie zapisów poza zaalokowanym obszarem, informowanie o
-pliku/numerze linii, w której wystêpuje problem oraz generalne
-statystyki. Biblioteka umo¿liwia odpluskwianie programów w±tkowych.
+zarzÄ…dzania pamiÄ™ciÄ…. MoÅ¼liwoÅ›ci to wykrywanie wyciekÃ³w pamiÄ™ci,
+wykrywanie zapisÃ³w poza zaalokowanym obszarem, informowanie o
+pliku/numerze linii, w ktÃ³rej wystÄ™puje problem oraz generalne
+statystyki. Biblioteka umoÅ¼liwia odpluskwianie programÃ³w wÄ…tkowych.
 
 %package static
 Summary:	Static dmalloc libraries
-Summary(pl):	Biblioteki statyczne dmalloc
+Summary(pl.UTF-8):   Biblioteki statyczne dmalloc
 Group:		Development/Debuggers
 Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static dmalloc libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne dmalloc.
 
 %prep
