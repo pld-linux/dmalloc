@@ -1,12 +1,12 @@
 Summary:	A library for controlling and tracing dynamic memory allocations
 Summary(pl.UTF-8):	Biblioteka do kontroli i śledzenia dynamicznej alokacji pamięci
 Name:		dmalloc
-Version:	5.4.2
+Version:	5.5.2
 Release:	1
 License:	LGPL
 Group:		Development/Debuggers
-Source0:	http://dl.sourceforge.net/dmalloc/%{name}-%{version}.tgz
-# Source0-md5:	ca8d9d72351679e20b8eff96a7a16bf3
+Source0:	http://dmalloc.com/releases/%{name}-%{version}.tgz
+# Source0-md5:	f92e5606c23a8092f3d5694e8d1c932e
 Source1:	%{name}.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pic.patch
@@ -72,10 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_infodir},%{_mandir}/man1}
 
 %{makeinstall} \
-	installsl installcxx installth installinfo \
+	installsl installcxx installth \
 	shlibdir=$RPM_BUILD_ROOT%{_libdir} \
 	incdir=$RPM_BUILD_ROOT%{_includedir}
 
+install docs/*.info $RPM_BUILD_ROOT%{_infodir}
 install dmalloc.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %post
